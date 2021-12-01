@@ -1,3 +1,4 @@
+function correr (){
 let numero = -1
 let acumulador = 0
 
@@ -7,3 +8,4 @@ while (numero != 0) {
 }
 
 console.log(`El resultado es ${acumulador}`)
+}

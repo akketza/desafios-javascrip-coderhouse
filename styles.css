@@ -9,24 +9,69 @@ body{
 }
 .mainDiv{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.row{  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.column{
+    display: flex;
     flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
     align-items: center;
 }
 .botones{
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 1.5rem;
-    transition: all 0.3 ease;
-}
-a{
-    padding: 2vh 4vw 2vh 4vw;
-    font-size: xx-large;
+    transition: all 0.3 ease; 
     border-radius: 40px;
     border-style: none;
-    background: #56ab2f; 
+    background: #56ab2f;
+    width: 13vw; 
+    height: 8vh;
     background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  
     background: linear-gradient(to right, #a8e063, #56ab2f);
+}
+.trabajo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+    transition: all 0.3 ease; 
+    border-radius: 40px;
+    border-style: none;
+    background: #56ab2f;
+    width: 30vw; 
+    height: 8vh;
+    background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+}
+p{
+    color: white;
+    font-size: xx-large;
+}
+@media (max-width:781px){
+    .botones{
+        width: 45vw; 
+        height: 8vh;
+    }
+}
+
+[aria-current="page"]{
+    pointer-events: none;
+    cursor: default;
+    background: grey;
+}
+a{
+    font-size: xx-large;
     color: #fff;
     transition: all 0.3s ease;
 }
@@ -34,12 +79,11 @@ a:hover{
     color: #131313;
     transition: all 0.3 ease;
 }
-a#home{
+a.iconos{
     padding: 10vh 4vw 2vh 4vw;
     font-size: xx-large;
     border-radius: 40px;
     border-style: none;
-    background: red; 
     color: #fff;
     background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  
     background: linear-gradient(to right, #a8e063, #56ab2f);
@@ -47,10 +91,10 @@ a#home{
 
 .titulo{
     font-size: x-large;
-    margin-bottom: 24px;
+    margin-bottom: 5rem;
     color: #fff;
-    padding: 3.5vh 0 0 0;
-    
+    padding-top: 3.5vh;
+    text-align: center;
 }
 .titulo span{
     background: #56ab2f;  /* fallback for old browsers */
@@ -60,4 +104,13 @@ a#home{
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 992px){
+    .row{
+        flex-direction: column;
+    }
+    .titulo{
+        text-align: center;
+    }
 }

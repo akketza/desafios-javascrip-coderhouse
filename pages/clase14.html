@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafios Coder</title>
     <link rel="stylesheet" href="../styles.css">
-    <script src="../js/clase9.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="../js/clase14.js"></script>
 </head>
 <body>
     <div class="mainDiv">
@@ -29,11 +30,17 @@
             <h1>Ejercicios <span>CoderHouse</span> JavaScript</h1>
         </div>
         <div class="column">
-            <div class="sinCuadro">
-                <p>Escribi aca para que se imprima</p>
-                <input type="text" name="txt" id="value" onkeypress="handle(event)">
-                <p id="print"></p>
+            <div class="formulario">
+                <form>
+                        <label for="name">Usuario</label>
+                        <input type="text"/>
+                        <label for="password">Contraseña</label>
+                        <input type="password">
+                        <button id="alertaBoton">Enviar</button>
+                </form>
             </div>
+            <button id="fadeIn">toca aca y te saludo</button>
+            <div id="alerta" hidden><p>hola!</p></div>
         </div>
 </body>
 </html>
